@@ -1,0 +1,21 @@
+server:
+  port: 7001
+
+# Eureka集群构建情况下，注释掉单机服务器配置，而将当前服务注册到集群其他节点之中
+eureka:
+  instance:
+    #hostname: localhost
+    hostname: eureka.server7001.com
+  client:
+    #服务端不需要注册自动
+    register-with-eureka: false
+    #服务端不需要检索服务
+    fetch-registry: false
+    service-url:
+      #设置与Euraka服务端地址查询与注册服务的地址
+      #defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+      defaultZone: http://eureka.server7002.com:7002/eureka/
+  server:
+    #关闭Eureka自我保护
+    #enable-self-preservation: false
+    #eviction-interval-timer-in-ms: 2000

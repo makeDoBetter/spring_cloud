@@ -1,0 +1,4 @@
+com\feng\springcloud\entities\CommonResult.class
+com\feng\springcloud\config\RestTemplateConfig.class
+com\feng\springcloud\entities\Payment.class
+com\feng\springcloud\config\HystrixDashboardConfig.class

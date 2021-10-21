@@ -1,0 +1,22 @@
+server:
+  port: 80
+
+eureka:
+  client:
+    register-with-eureka: false
+    service-url:
+      #设置与Eureka服务端查询与注册服务的地址
+      # Eureka单机服务注册地址
+      #defaultZone: http://localhost:7001/eureka/
+      # Eureka集群版注册地址，指向所有Eureka服务端节点
+      defaultZone: http://eureka.server7001.com:7001/eureka/, http://eureka.server7002.com:7002/eureka/
+#设置OpenFeign超时时间
+ribbon:
+  #建立连接后读时间
+  ReadTimeout: 5000
+  #建立连接时间
+  ConnectTimeout: 5000
+
+logging:
+  level:
+    com.feng.springcloud.service.FeignPaymentService: debug

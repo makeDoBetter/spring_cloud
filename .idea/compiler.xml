@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="cloud-consumer-order-8007" />
+        <module name="cloud-consumer-hystrix-order-80" />
+        <module name="cloud-eureka-server-01" />
+        <module name="cloud-consumer-feign-order" />
+        <module name="cloud-api-common" />
+        <module name="cloud-provider-payment" />
+        <module name="cloud-provider-hytrix-payment-8001" />
+        <module name="cloud-provider-payment-01" />
+        <module name="cloud-consumer-order" />
+        <module name="cloud-eureka-server" />
+        <module name="cloud-provider-payment-8006" />
+        <module name="cloud-consumer-hystrix-dashboard-9001" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="cloud-consumer-order-hystrix-order-80" target="1.8" />
+      <module name="cloud-consumer-order-hytrix-order-80" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

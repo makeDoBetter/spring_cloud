@@ -1,0 +1,25 @@
+#使用80端口是客户端不需要知道端口号这个值，直接输入网址就行
+server:
+  port: 80
+
+spring:
+  application:
+    name: cloud-consumer-order
+
+eureka:
+  client:
+    #将当前服务注册到Eureka服务端中
+    register-with-eureka: true
+    #客户端单机默认值为true，使用集群时配合Ribbon负载均衡时一定需要配置
+    fetch-registry: true
+    service-url:
+      #设置与Eureka服务端查询与注册服务的地址
+      # Eureka单机服务注册地址
+      #defaultZone: http://localhost:7001/eureka/
+      # Eureka集群版注册地址，指向所有Eureka服务端节点
+      defaultZone: http://eureka.server7001.com:7001/eureka/, http://eureka.server7002.com:7002/eureka/
+  instance:
+    #Eureka注册实例名
+    instance-id: order
+    #访问路径显示ip
+    prefer-ip-address: true

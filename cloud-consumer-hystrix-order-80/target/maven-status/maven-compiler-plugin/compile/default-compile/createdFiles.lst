@@ -1,0 +1,5 @@
+com\feng\springcloud\controller\OrderController.class
+com\feng\springcloud\HystrixOrderMain.class
+com\feng\springcloud\controller\OrderHystrixController.class
+com\feng\springcloud\service\FeignHystrixFallBackService.class
+com\feng\springcloud\service\FeignOrderService.class

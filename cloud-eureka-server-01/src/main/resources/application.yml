@@ -1,0 +1,20 @@
+server:
+  port: 7002
+
+spring:
+  application:
+    name: eureka-server-7002
+
+eureka:
+  instance:
+    #通过修改设置本级hosts文件中，新增Eureka集群地址映射
+    hostname: eureka.server7002.com
+  client:
+    #服务端不需要注册自动
+    register-with-eureka: false
+    #服务端不需要检索服务
+    fetch-registry: false
+    service-url:
+      #设置与Euraka服务端地址查询与注册服务的地址
+      # Eureka集群下，多个服务端互相注册
+      defaultZone: http://eureka.server7001.com:7001/eureka/

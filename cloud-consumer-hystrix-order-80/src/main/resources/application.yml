@@ -1,0 +1,22 @@
+#使用80端口是客户端不需要知道端口号这个值，直接输入网址就行
+server:
+  port: 80
+
+spring:
+  application:
+    name: cloud-consumer-hystrix-order-80
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        service-name: ${spring.application.name}
+
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 60000
+        readTimeout: 60000
+  hystrix:
+    enabled: true
